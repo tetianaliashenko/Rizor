@@ -1,0 +1,87 @@
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.values__item {
+    display: flex;
+    flex-direction: column;
+    @include indents;
+}
+
+.values__amount {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+
+    @include font-apply($font-weight: 400, $font-family: "Rubik Mono One");
+    font-size: 50px;
+    line-height: 50px;
+
+    color: $blue;
+    letter-spacing: -8px;
+}
+
+.values__metric {
+    padding-left: 10px;
+
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 0;
+}
+
+.values__info {
+    width: 152px;
+
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+    .values {
+        width: 420px;
+    }
+
+    .values__info {
+        width: 190px;
+    
+        line-height: 27px;
+    }
+
+    
+}
+
+@media (min-width: $desktop-width) {
+    .values {
+        width: 380px;
+    }
+
+    .values__amount {
+        margin-bottom: 10px;
+    
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .values__metric {
+        font-size: 24px;
+    }
+
+    .values__info {
+        width: 135px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

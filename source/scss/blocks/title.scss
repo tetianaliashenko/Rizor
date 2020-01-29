@@ -1,0 +1,15 @@
+.title {
+    @include font-apply($font-weight: 700);
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    &--blue {
+    color: $blue;
+    }
+
+    &--white {
+        color: $white;
+    }
+}

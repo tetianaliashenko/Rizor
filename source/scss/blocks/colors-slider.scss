@@ -1,0 +1,216 @@
+.colors-slider {
+    width: 370px;
+}
+
+.colors-slider__toggles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 305px;
+    @include list-style;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+.colors-slider__tab {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+
+    background-color: transparent;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 20px;
+        height: 20px;
+
+        border-radius: 50%;
+    }
+
+    &--yellow::after {
+        background-color: $yellow;
+    }
+
+    &--blue::after {
+        background-color: $light-blue;
+    }
+
+    &--red::after {
+        background-color: $red;
+    }
+
+    &--grey::after {
+        background-color: $grey;
+    }
+
+    &--black::after {
+        background-color: $black;
+    }
+}
+
+.colors-slider__slides {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: end;
+    width: 370px;
+    @include list-style;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 160px;
+        left: 13px;
+
+        width: 130px;
+        height: 35px;
+
+        background-image: url("../../img/shadow-2.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 120px;
+        right: 98px;
+
+        width: 90px;
+        height: 25px;
+
+        background-image: url("../../img/shadow-3.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.colors-slider__image {
+    position: relative;
+    display: none;
+    width: 80%;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 110px;
+        left: 10px;
+
+        width: 325px;
+        height: 115px;
+
+        background: url("../../img/shadow-1.png") no-repeat;
+        background-size: 80%;
+    }
+}
+
+.colors-slider__input:first-of-type:checked ~ .colors-slider__slides .colors-slider__image:first-of-type,
+.colors-slider__input:nth-of-type(2):checked ~ .colors-slider__slides .colors-slider__image:nth-of-type(2),
+.colors-slider__input:nth-of-type(3):checked ~ .colors-slider__slides .colors-slider__image:nth-of-type(3),
+.colors-slider__input:nth-of-type(4):checked ~ .colors-slider__slides .colors-slider__image:nth-of-type(4),
+.colors-slider__input:nth-of-type(5):checked ~ .colors-slider__slides .colors-slider__image:nth-of-type(5) {
+    display: block;
+}
+
+@media (min-width: $tablet-width) {
+    .colors-slider {
+        width: 240px;
+    }
+
+    .colors-slider__toggles {
+        width: 250px;
+    }
+
+    .colors-slider__tab {
+        width: 15px;
+        height: 15px;
+        margin-right: 15px;
+    
+        &::after {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .colors-slider__slides {
+        left: -50px;
+    
+        &::before {
+            top: 135px;
+            left: 13px;
+        }
+    
+        &::after {
+            top: 100px;
+            right: 120px;
+        }
+    }
+
+    .colors-slider__image {
+        width: 70%;
+    
+        &::after {
+            top: 95px;
+            left: -2px;
+    
+            background-size: 70%;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .colors-slider {
+        width: 370px;
+    }
+
+    .colors-slider__toggles {
+        width: 305px;
+        padding-top: 42px;
+    }
+
+    .colors-slider__tab {
+        width: 20px;
+        height: 20px;
+        margin-right: 30px;
+    
+        &::after {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .colors-slider__slides {
+        left: -100px;
+    
+        &::before {
+            top: 210px;
+            left: 13px;
+        }
+    
+        &::after {
+            top: 157px;
+            right: 53px;
+        }
+    }
+
+    .colors-slider__image {
+        width: 370px;
+    
+        &::after {
+            top: 132px;
+            left: 10px;
+    
+            background-size: 100%;
+        }
+    }
+}

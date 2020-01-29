@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotolight300.woff2") format("woff2"),
+       url("../fonts/robotolight300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold700.woff2") format("woff2"),
+      url("../fonts/robotobold700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik Mono One";
+  src: url("../fonts/rubikmonooneregular.woff2") format("woff2"),
+      url("../fonts/rubikmonooneregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  @include font-apply;
+  font-size: 18px;
+  line-height: 33px;
+  color: $black;
+
+  background-color: $white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  body {
+    font-size: 18px;
+    line-height: 33px;
+  }
+}

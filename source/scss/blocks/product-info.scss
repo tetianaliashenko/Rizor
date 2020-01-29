@@ -1,0 +1,174 @@
+.product-info {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    padding: 0 20px 20px;    
+
+    &::after {
+        @include background;
+        top: -20px;
+        left: 0;
+
+        background-size: 55%;
+    }
+}
+
+.product-info__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 2;
+    padding-top: 20px;
+}
+
+.product-info__main-title {
+    z-index: 9;
+    width: 300px;
+    margin-bottom: 7px;
+}
+
+.product-info__title {
+    position: relative;
+    width: 200px;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        bottom: -17px;
+        left: 210px;
+
+        width: 15px;
+        height: 100px;
+
+        background: url("../../img/arrow.png") no-repeat;
+    }
+}
+
+.product-info__video {
+    position: relative;  
+    display: flex;
+    align-content: flex-start;
+} 
+
+.product-info__button {
+    z-index: 10;
+    position: absolute; 
+    top: 102px;
+    left: -70px;
+}
+
+@media (min-width: $tablet-width) {
+    .product-info {
+        align-content: flex-start;
+        width: 768px;
+        padding: 0 30px 30px;    
+    
+        &::after {
+            @include background;
+
+            background-size: 50%;
+        }
+    }
+
+    .product-info__main-title {
+        position: relative;
+        width: 320px;
+    
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 45px;
+            left: 285px;
+    
+            width: 35px;
+            height: 85px;
+    
+            background: url("../../img/play-decor.png") no-repeat;
+    
+            transform: scale(1, -1);
+        }
+    }
+
+    .product-info__title {
+        width: 350px;
+    
+        &::after {
+            content: "";
+    
+            position: absolute;
+            bottom: -50px;
+            left: -20px;
+    
+            width: 15px;
+            height: 100px;
+    
+            background: url("../../img/arrow.png") no-repeat;
+        }
+    }
+
+    .product-info__video-image {
+        width: 60%;
+    }
+
+    .product-info__button {
+        top: 106px;
+        left: -102px;
+    }
+} 
+
+@media (min-width: $desktop-width) {
+    .product-info {
+        width: 1920px;
+        padding: 0 0 200px 368px;    
+    
+        &::after {
+            @include background;
+        }
+    
+        &::before {
+            @include background-nav;
+    
+            background: url("../../img/nav-decor.png") no-repeat;
+        }
+    }
+
+    .product-info__wrapper {
+        margin-right: -193px;
+        padding-top: 180px;
+    }
+
+    .product-info__main-title {
+        width: 670px;
+    
+        &::before {
+            top: -30px;
+            left: 400px;
+    
+            transform: none;
+        }
+    }
+
+    .product-info__title {
+        position: relative;
+        width: 380px;
+    
+        &::after {
+            bottom: -132px;
+            left: 38px;
+        }
+    }
+
+    .product-info__video-image {
+        width: 1075px;
+    }
+
+    .product-info__button {
+        z-index: 10;
+        position: absolute; 
+        top: 57px;
+        left: -140px;
+    }
+}

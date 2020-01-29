@@ -1,0 +1,37 @@
+.list__item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 45px;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 14px;
+        left: -0;
+    
+        width: 30px;
+        height: 5px;
+
+        background-color: $black;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .list__item {    
+        &::after {
+            top: 8px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .list__item {   
+        &::after {
+            top: 17px;
+        }
+    }
+}
+
+
+

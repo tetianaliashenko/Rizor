@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rizor</title>
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/robotobold700.woff2" as="font">
+    <link rel="preload" href="fonts/robotolight300.woff2" as="font">
+    <link rel="preload" href="fonts/rubikmonooneregular.woff2" as="font">
+</head>
+
+<body>
+    <header class="page-header">
+        <a class="logo page-header__logo"><img class="page-header__logo-image" src="img/logo.png" alt="Логотип бренда Rizor"></a>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item main-nav__item--active"><a class="main-nav__link"
+                        href="#advantages">Преимущества</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#features">Характеристики</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#users">Для кого</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-main__product-info product-info">
+            <div class="product-info__wrapper">
+                <h1 class="product-info__main-title main-title">Rizor Hovertrax <span
+                        class="main-title--version">4.0</span></h1>
+                <h2 class="product-info__title title">Маневренность, легкость, экологичность</h2>
+            </div>
+
+            <section class="product-info__video video">
+                <button class="product-info__button video-button">
+                    <p class="video-button__text">Смотреть видео</p>
+                    <img class="video-button__image" src="img/play.png" alt="Кнопка запуска видео" width="70"
+                        height="70">
+                </button>
+                <img class="product-info__video-image" src="img/image.png" alt="Первое видео о гироскутере Rizor"
+                    width="1075" height="750">
+            </section>
+        </section>
+
+        <section class="page-main__advantages advantages">
+            <div class="advantages__wrapper">
+                <h2 class="advantages__title title title--blue">Преимущества</h2>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <h3 class="advantages__title-less title-less">Дизайн</h3>
+                        <p class="advantages__text">Внешний вид скутера дышит идеями футуризма:</p>
+                        <ul class="advantages__sublist list">
+                            <li class="advantages__subitem list__item">плавные линии</li>
+                            <li class="advantages__subitem list__item">подсветка светодиодными индикаторами</li>
+                            <li class="advantages__subitem list__item">рельефные бамперы, оснащенные защитными панелями
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="advantages__item advantages__item--lower">
+                        <h3 class="advantages__title-less advantages__title-less--decor title-less">Цвет</h3>
+                        <p class="advantages__text">Модель представлена сразу в нескольких цветах.</p>
+                        <div class="advantages__slider colors-slider">
+                            <input class="colors-slider__input visually-hidden" type="radio" id="tab1" name="tab-group">
+                            <input class="colors-slider__input visually-hidden" type="radio" id="tab2" name="tab-group">
+                            <input class="colors-slider__input visually-hidden" type="radio" id="tab3" name="tab-group">
+                            <input class="colors-slider__input visually-hidden" type="radio" id="tab4" name="tab-group">
+                            <input class="colors-slider__input visually-hidden" type="radio" id="tab5" name="tab-group"
+                                checked>
+
+                            <ul class="colors-slider__toggles">
+                                <li class="colors-slider__tab colors-slider__tab--yellow"><label for="tab1"
+                                        aria-label="Желтый"></label></li>
+                                <li class="colors-slider__tab colors-slider__tab--blue"><label for="tab2"
+                                        aria-label="Голубой"></label></li>
+                                <li class="colors-slider__tab colors-slider__tab--red"><label for="tab3"
+                                        aria-label="Красный"></label></li>
+                                <li class="colors-slider__tab colors-slider__tab--grey"><label for="tab4"
+                                        aria-label="Серый"></label></li>
+                                <li class="colors-slider__tab colors-slider__tab--black"><label for="tab5"
+                                        aria-label="Черный"></label></li>
+                            </ul>
+
+                            <ul class="colors-slider__slides">
+                                <li class="colors-slider__image"><img src="img/scooter.png" alt="Скутер желтого цвета"
+                                        width="370" height="300">
+                                </li>
+                                <li class="colors-slider__image"><img src="img/scooter.png" alt="Скутер голубого цвета"
+                                        width="370" height="300">
+                                </li>
+                                <li class="colors-slider__image"><img src="img/scooter.png" alt="Скутер красного цвета"
+                                        width="370" height="300">
+                                </li>
+                                <li class="colors-slider__image"><img src="img/scooter.png" alt="Скутер серого цвета"
+                                        width="370" height="300">
+                                </li>
+                                <li class="colors-slider__image"><img src="img/scooter.png" alt="Скутер черного цвета"
+                                        width="370" height="300">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <section class="advantages__video video">
+                <button class="advantages__button video-button video-button--background">
+                    <p class="visually-hidden">Смотреть видео</p>
+                    <img class="video-button__image" src="img/play.png" alt="Кнопка запуска видео" width="47"
+                        height="47">
+                </button>
+                <img class="advantages__video-image" src="img/image-2.png" alt="Второе видео о гироскутере Rizor"
+                    width="745" height="750">
+            </section>
+        </section>
+
+        <section class="page-main__features features">
+            <div class="features__wrapper">
+                <h2 class="visually-hidden">Характеристики</h2>
+                <h3 class="features__title features__title--decor title-less">Режимы</h3>
+                <p class="features__text">Помимо «умной» подсветки, <b>Hovertrax 4.0</b> снабжён двумя
+                    скоростными режимами.</p>
+                <ul class="features__sublist list">
+                    <li class="features__subitem list__item">Один для продвинутых пользователей</li>
+                    <li class="features__subitem list__item">Второй для новичков</li>
+                </ul>
+                <div class="features__values values">
+                    <p class="values__item">
+                        <span class="values__amount">13 <span class="values__metric">км/ч</span></span>
+                        <span class="values__info">Максимальная скорость</span>
+                    </p>
+                    <p class="values__item">
+                        <span class="values__amount">2</span>
+                        <span class="values__info">Скоростных режима</span>
+                    </p>
+                </div>
+            </div>
+
+            <section class="features__video video">
+                <button class="features__button video-button">
+                    <p class="video-button__text">Смотреть видео</p>
+                    <img class="video-button__image" src="img/play.png" alt="Кнопка запуска видео" width="70" height="70">
+                </button>
+                <img class="features__video-image" src="img/image-3.png" alt="Третье видео о гироскутере Rizor"
+                    width="1075" height="755">
+            </section>
+        </section>
+
+        <section class="page-main__users users">
+            <div class="users__wrapper">
+                <h2 class="users__title title title--white">Для кого</h2>
+                <p class="users__text">При максимально выдерживаемой нагрузке в <b>100
+                        кг</b> отлично подойдёт,<br/> как для подрастающего поколения,<br/> так и
+                    для более взрослых «наездников».</p>
+                <p class="users__text">Это единственный гироскутер со специальным детским режимом</br> езды.</p>
+                <a class="users__button button" href="#">Перейти в каталог</a>
+            </div>
+            <div class="users__photo">
+                <img class="users__image" src="img/image-4.png" alt="Подростки на гироскутерах" width="1175" height="750">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

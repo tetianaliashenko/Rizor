@@ -1,0 +1,133 @@
+.features {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 320px;
+    padding: 20px;
+
+    &::after {
+        @include background;
+        background-size: 60%;
+        top: -63px;
+    }
+}
+
+.features__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.features__title {
+    width: 235px;
+}
+
+.features__text {
+    width: 300px;
+    @include indents;
+    margin-bottom: 17px;
+}
+
+.features__sublist {
+    width: 300px;
+    @include list-style;
+    margin-bottom: 30px;
+}
+
+.features__video {
+    position: relative;
+}
+
+.features__video-image {
+    width: 80%;
+}
+
+.features__button {
+    position: absolute; 
+    top: 40px;
+    left: -70px;
+}
+
+@media (min-width: $tablet-width) {
+    .features {
+        justify-content: space-between;
+        width: 768px;
+        padding: 30px;
+    }
+
+    .features__wrapper {
+        margin-bottom: 30px;
+    }
+
+    .features__title {  
+        &--decor::before {
+            content: "";
+    
+            position: absolute;
+            top: 40px;
+            right: 385px;
+    
+            width: 170px;
+            height: 485px;
+    
+            background: url("../../img/play-decor-4.png") no-repeat;
+        }
+    }
+
+    .features__text {
+        width: 370px;
+    }
+    
+    .features__sublist {
+        width: 370px;
+        margin-bottom: 40px;
+    }
+
+    .features__video-image {
+        width: 60%;
+    }
+  
+    .features__button {
+        top: 65px;
+        left: -100px;
+    } 
+}
+
+@media (min-width: $desktop-width) {
+    .features {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1920px;
+        padding: 0 0 170px 375px;
+    
+        &::after {
+            background-size: 100%;
+        }
+    }
+
+    .features__wrapper {
+        margin-bottom: 0;
+        padding-top: 85px;
+    }
+
+    .features__title {
+        &--decor::before {
+            top: 105px;
+            right: 1100px;
+        }
+    }
+
+    .features__sublist {
+        margin-bottom: 60px;
+    }
+
+    .features__video-image {
+        width: 1075px;
+    }
+
+    .features__button {
+        top: 585px;
+        left: -125px;
+    }
+}

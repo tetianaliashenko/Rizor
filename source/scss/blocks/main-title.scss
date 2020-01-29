@@ -1,0 +1,27 @@
+.main-title {
+    @include indents;
+
+    @include font-apply($font-weight: 400, $font-family: "Rubik Mono One");
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    &--version {
+        letter-spacing: -11.5px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .main-title {
+        letter-spacing: 6.5px;
+    }
+}
+
+
+@media (min-width: $desktop-width) {
+    .main-title {
+        font-size: 80px;
+        line-height: 95px;
+    }
+}

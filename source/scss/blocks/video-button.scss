@@ -1,0 +1,46 @@
+.video-button {
+    z-index: 20;
+    display: flex;
+    width: 100px;
+    height: 100px;
+
+    border: none;
+    background: transparent;
+
+    &--background {
+        justify-content: center;
+        align-items: center;
+
+        background: url("../../img/round.png") no-repeat;
+    }
+}
+
+.video-button__text {
+    @include indents;
+    margin-right: 30px;
+
+    @include font-apply($font-weight: 700);
+    font-size: 13px;
+    line-height: 14px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    transform-origin: right top 0;
+}
+
+.video-button__image {
+    z-index: 5;
+
+    &:active {
+       opacity: 0.6;
+    }
+}
+
+
+
+
+
+
+
+
+
+

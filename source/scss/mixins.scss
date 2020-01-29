@@ -1,0 +1,74 @@
+@mixin font-apply($font-weight: 300, $font-style: normal, $font-family: "Roboto", $text-align: left) {
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-family: $font-family, "Arial", sans-serif;
+  text-align: $text-align;
+}
+
+@mixin list-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin indents {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin background {
+    content: "";
+
+    position: absolute;
+    top: -33px;
+    left: 0;
+    z-index: -2;
+
+    width: 520px;
+    height: 885px;
+
+    background: url("../../img/background.png") no-repeat;
+}
+
+@mixin background-words {
+    width: 780px;
+    height: 285px;
+            
+    @include font-apply($font-weight: 400, $font-family: "Rubik Mono One", $text-align: right);
+    font-size: 173px;
+    line-height: 170px;
+    color: $light-grey;
+    opacity: 0.6;
+}
+
+@mixin background-words-number {
+    content: "4.0";
+
+    position: absolute;
+
+    @include background-words;
+
+    letter-spacing: -45px;
+}
+
+@mixin background-words-text {
+    content: "Rizor";
+
+    position: absolute;
+
+    @include background-words;
+
+    letter-spacing: 10px;
+}
+
+@mixin background-nav {
+    content: "";
+
+    position: absolute;
+    top: -18px;
+    right: 90px;
+    z-index: 2;
+
+    width: 20px;
+    height: 790px;
+}

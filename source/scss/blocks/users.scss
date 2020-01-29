@@ -1,0 +1,155 @@
+.users {
+    position: relative;
+    width: 320px;
+    padding: 20px;
+
+    background-color: $blue;
+}
+
+.users__photo {
+    position: absolute;
+    top: 475px;
+    right: 0;
+    width: 320px;
+    height: 200px;
+
+    background: linear-gradient(to bottom right, $fiolet, $darker-blue);
+    box-shadow: 4px 5px 15px rgba(1, 1, 1, 0.2);
+
+    overflow: hidden;
+
+    &::after {        
+        @include background-words-number;
+        bottom: -110px;
+        left: -10px;
+        width: 300px;
+
+        font-size: 30px;
+        letter-spacing: -41px;
+    }
+
+    &::before {
+        @include background-words-text;
+
+        bottom: -140px;
+        left: 5px;
+        width: 300px;
+
+        font-size: 30px;
+        letter-spacing: 13px;
+    }
+}
+
+.users__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.users__title {
+    @include indents;
+    margin-bottom: 25px;
+}
+
+.users__text {
+    width: 310px;
+    @include indents;
+
+    font-size: 17px;
+
+    color: $white;
+
+    &:last-of-type {
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .users {
+        width: 768px;
+        padding: 30px; 
+    }
+
+    .users__photo {
+        top: -20px;
+        right: 288px;
+        width: 300px;
+        height: 193px;
+    
+        &::after {        
+            bottom: -120px;
+            left: -45px;
+        }
+    
+        &::before {
+            bottom: -157px;
+            left: -28px;
+        }
+    }
+
+    .users__wrapper {
+        padding-top: 50px;
+    }
+
+    .users__title {
+        margin-bottom: 70px;
+    }
+
+    .users__text {
+        width: 270px;
+
+        font-size: inherit;
+           
+        &:last-of-type {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .users {
+        width: 1920px;
+        padding: 0 0 220px 375px;
+    
+        background: url("../../img/background-2.png") no-repeat; 
+    }
+
+    .users__photo {
+        top: -60px;
+        right: 0;
+        width: 1175px;
+        height: 750px;
+    
+        &::after {        
+            bottom: 20px;
+            left: -10px;
+            width: 780px;
+    
+            font-size: 177px;
+        }
+    
+        &::before {    
+            bottom: -157px;
+            left: -28px;
+            width: 780px;
+    
+            font-size: 186px;
+        }
+    }
+
+    .users__wrapper {
+        padding-top: 90px;
+    }
+
+    .users__title {
+        margin-bottom: 75px;
+    }   
+    
+    .users__text {
+        width: 340px;
+           
+        &:last-of-type {
+            margin-bottom: 95px;
+        }
+    } 
+}
