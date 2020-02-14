@@ -1,0 +1,47 @@
+.video-button {
+    z-index: 20;
+    display: flex;
+
+    &--background {
+        width: 100px;
+        min-height: 100px;
+        justify-content: center;
+        align-items: center;
+
+        background: url("../../img/round.png") no-repeat;
+    }
+}
+
+.video-button__text {
+    width: 80px;
+    margin: 0 25px 80px -5px;
+
+    @include font-apply($font-weight: 700);
+    font-size: 13px;
+    line-height: 14px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    transform-origin: right top 0;
+}
+
+.video-button__button {
+    border: none;
+    background: transparent;
+
+    @keyframes video-button {
+        0% {transform: scale(1.2)}
+        100% {transform: scale(1.2)}
+    }
+
+    &:hover {
+        animation: video-button 5s infinite ease-in-out;
+    }
+}
+
+.video-button__image {
+    z-index: 5;
+
+    &:active {
+       opacity: 0.6;
+    }
+}
